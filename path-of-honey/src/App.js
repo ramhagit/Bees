@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-const App = () => {
+const Home = () => {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-        
         <p>
           Hello Bees
         </p>
@@ -18,6 +18,16 @@ const App = () => {
           real site
         </a>
       </header>
+    </div>
+  )
+}
+
+const App = () => {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Route path="/" exact component={Home} />
+      </BrowserRouter>
     </div>
   );
 }
